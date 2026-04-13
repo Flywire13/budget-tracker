@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Budget Tracker</title>
+    <style>
+        body 
+        {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px;
+            background: #f5f5f5;
+        }
+        form
+        {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .card 
+        {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            flex: 1;
+        }
+        .cards
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .transaction_form
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Budget Tracker</h1>
+        
+        <!-- Summary cards -->
+        <div class="cards">
+            <div class="card">
+                <h2>Total Income</h2>
+                    <p id="income">$0.00</p>
+            </div>
+            <div class="card">
+                <h2>Total Expenses</h2>
+                    <p id="expenses">$0.00</p>
+            </div>
+        </div>
+
+        <!-- Add transaction form -->
+        <h2>Add Transaction</h2>
+        <form class="transaction_form">
+            <input type="number" placeholder="Amount" />
+            <input type="text" placeholder="Description" />
+            <select name="category">
+                <option value="food">Food</option>
+                <option value="salary">Salary</option>
+                <option value="rent">Rent</option>
+                <option value="transport">Transport</option>
+                <option value="other">Other</option>
+            </select>
+            <select name="type">
+                <option value="income">Income</option>
+                <option value="expenses">Expenses</option>
+            </select>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <!-- Transaction list -->
+        <h2>Transactions</h2>
+        <div class="transaction_list">
+            <ul>
+
+            </ul>
+        </div>
+
+    </main>
+</body>
+</html>
