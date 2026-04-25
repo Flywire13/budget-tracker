@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1777094273823,
+    "amount": 50,
+    "description": "Groceries",
+    "category": "food",
+    "type": "expense"
+  }
+]
